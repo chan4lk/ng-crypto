@@ -1,0 +1,23 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<div>
+  <h2>
+    Here is our current block chanin
+  </h2>
+  <div>
+    {{blockchain}}
+  </div>
+</div>
+
+<div>
+  <h2>Blockchain State:</h2>
+  <div *ngIf="cryptoSvc.cryptoChain.isChainValid; else invalidBlockchanin">
+    Chanin is in a <b>valid</b> state
+  </div>
+  <ng-template #invalidBlockchanin>Chain is in an <b>invalid</b> state</ng-template>
+</div>
+
